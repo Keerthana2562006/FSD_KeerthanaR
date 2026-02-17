@@ -1,0 +1,107 @@
+<html><head><title>Valentine App</title>
+<style>
+    body{
+        background-image: url(./new.jpg);
+        background-size: cover;
+    }
+    fieldset{background-color:#C40808;
+    width: 30%;
+    margin:auto;
+    margin-top: 15%;
+    height: 43%;
+    border: none;
+    border-radius: 50px;
+    }
+    h1{text-align: center;
+       color:white;
+       font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       font-style: oblique;
+    }
+    
+    input{text-align: center;
+        background-color:white;
+        margin-left: 25%;
+        border: none;
+        height: 10%;
+        border-radius: 10px;
+        color: RED;
+        width: 45%;
+        
+    }
+   
+    button{
+        background-color:white;
+        margin-left: 25%;
+        border: none;
+        height: 10%;
+        border-radius: 10px;
+        margin-top: 5%;
+        margin-left:31% ;
+        color:lightcoral;
+
+    }
+    button:hover {
+            background-color:red ;
+            transform: scale(1);}
+    #message{
+        margin-top: 25px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            min-height: 4em;
+            text-align: center;
+            font-style: oblique;
+    }
+
+       
+</style>
+</head>
+<body>
+    <fieldset>
+        <h1>7 Days of Love 💖</h1>
+        <input type="number" id="myDay"placeholder="Enter the date" min="1" max="28">
+        <button onclick="findDay()">Which Love Day?</button>
+        
+
+        <p id="message"></p>
+
+    </fieldset>
+    <script>
+        function findDay() {
+            var date = document.getElementById("myDay").value;
+            var result = document.getElementById("message");
+            
+          
+            if (date == "") {
+                alert("Please type a number!");
+                return;
+            }
+
+           
+            if (date < 1 || date > 29) {
+                result.innerHTML = "That's not a valid date!";
+            } 
+            else if (date == 7) {
+                result.innerHTML = "Rose Day! 🌹";
+            } else if (date == 8) {
+                result.innerHTML = "Propose Day! 💍";
+            } else if (date == 9) {
+                result.innerHTML = "Chocolate Day! 🍫";
+            } else if (date == 10) {
+                result.innerHTML = "Teddy Day! 🧸";
+            } else if (date == 11) {
+                result.innerHTML = "Promise Day! 🤝";
+            } else if (date == 12) {
+                result.innerHTML = "Hug Day! 🤗";
+            } else if (date == 13) {
+                result.innerHTML = "Kiss Day! 💋";
+            } else if (date == 14) {
+                result.innerHTML = "VALENTINE'S DAY! ❤️";
+            } else {
+                result.innerHTML = "Just a normal day.";
+            }
+        }
+    </script>
+
+</body>
+</html>
